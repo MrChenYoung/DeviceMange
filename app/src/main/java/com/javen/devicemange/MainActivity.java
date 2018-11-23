@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
         ComponentName deviceComponentName = new ComponentName(getPackageName(),MyDeviceReceiver.class.getName());
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, deviceComponentName);
+        intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,"激活提示");
         this.startActivity(intent);
 
 
